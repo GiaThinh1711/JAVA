@@ -11,7 +11,7 @@ public class SoNguyenTo {
         if(isSoNguyenTo(a)){
             this.a = a;
         }else{
-            System.out.println("DCU MAY");
+            System.out.println("NON");
         }
     }
 

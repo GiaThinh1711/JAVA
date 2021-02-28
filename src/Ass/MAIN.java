@@ -16,5 +16,7 @@ public class MAIN {
         ps.Tru();
         ps.Nhan();
         ps.Chia();
+        ps.Nghichdao(ps.getTuso(), ps.getMauso());
+        ps.Nghichdao(ps.getTuso2(), ps.getMauso2());
     }
 }

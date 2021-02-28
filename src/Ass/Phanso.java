@@ -127,4 +127,9 @@ public class Phanso {
             else System.out.println("Phân số rút gọn là: " + rgt + "/" + rgm);
         }
     }
+    public void Nghichdao(int x,int y){
+            int nd;
+            nd = y / x;
+            System.out.println("Phân số nghịch đảo là: " + y + "/" + x);
+    }
 }
