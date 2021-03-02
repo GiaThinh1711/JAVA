@@ -4,9 +4,19 @@ import java.util.Scanner;
 
 public class Person {
     public String name;
-    public String sex;
-    public String birth;
+    public String gender;
+    public String birthday;
     public String address;
+
+    public Person() { // ham khoi tao khong tham so
+    }
+
+    public Person(String name, String gender, String birthday, String address) { // ham khoi tao day du tham so
+        this.name = name;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.address = address;
+    }
 
     public String getName() {
         return name;
@@ -16,20 +26,20 @@ public class Person {
         this.name = name;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public String getBirth() {
-        return birth;
+    public String getBirthday() {
+        return birthday;
     }
 
-    public void setBirth(String birth) {
-        this.birth = birth;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 
     public String getAddress() {
@@ -40,27 +50,22 @@ public class Person {
         this.address = address;
     }
 
-    public Person(){
-
-    }
-
-    public void nhapTT(){
+    public void inputInfo(){
         Scanner sc = new Scanner(System.in);
-        Person p = new Person();
-        System.out.println("Tên: ");
+        System.out.println("Ten:");
         setName(sc.nextLine());
-        System.out.println("Giới tính: ");
-        setName(sc.nextLine());
-        System.out.println("Ngày sinh: ");
-        setName(sc.nextLine());
-        System.out.println("Địa chỉ: ");
-        setName(sc.nextLine());
+        System.out.println("Gioi tinh:");
+        setGender(sc.nextLine());
+        System.out.println("Ngay sinh:");
+        setBirthday(sc.nextLine());
+        System.out.println("Dia chi:");
+        setAddress(sc.nextLine());
     }
 
-    public void inTT(){
-        System.out.println("Tên SV: " + getName());
-        System.out.println("Giới tính: " + getSex());
-        System.out.println("Ngày sinh: " + getBirth());
-        System.out.println("Địa chỉ: " + getAddress());
+    public void showInfo(){
+        System.out.println("Ho va ten:"+this.getName());
+        System.out.println("Gioi tinh:"+this.getGender());
+        System.out.println("Ngay sinh:"+this.getBirthday());
+        System.out.println("Dia chi:"+this.getAddress());
     }
 }

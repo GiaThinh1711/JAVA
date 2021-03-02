@@ -2,25 +2,25 @@ package ss5;
 
 import java.util.Scanner;
 
-public class Student extends Person {
-    String maSV;
-    int diemThi;
+public class Student extends Person{
+    int maSv;
+    float mark;
     String email;
 
-    public String getMaSV() {
-        return maSV;
+    public int getMaSv() {
+        return maSv;
     }
 
-    public void setMaSV(String maSV) {
-        this.maSV = maSV;
+    public void setMaSv(int maSv) {
+        this.maSv = maSv;
     }
 
-    public int getDiemThi() {
-        return diemThi;
+    public float getMark() {
+        return mark;
     }
 
-    public void setDiemThi(int diemThi) {
-        this.diemThi = diemThi;
+    public void setMark(float mark) {
+        this.mark = mark;
     }
 
     public String getEmail() {
@@ -31,43 +31,27 @@ public class Student extends Person {
         this.email = email;
     }
 
-    public Student(){
-
-    }
-
-    public void nhapTT(){
-        super.nhapTT();
+    public void inputInfo(){
+        super.inputInfo();
         Scanner sc = new Scanner(System.in);
-        Student sd = new Student();
-        sd.setName("Tên: ");
-        setName(sc.nextLine());
-        sd.setSex("Giới tính: ");
-        setSex(sc.nextLine());
-        sd.setBirth("30/2/2002");
-        setBirth(sc.nextLine());
-        sd.setAddress("Địa chỉ: ");
-        setAddress(sc.nextLine());
-        sd.setMaSV("Mã SV: ");
-        setMaSV(sc.nextLine());
-        sd.setDiemThi(1);
-        setDiemThi(sc.nextInt());
-        sc.next();
-        sd.setEmail("Email: ");
+
+        System.out.println("Ma SV:");
+        setMaSv(sc.nextInt());
+        System.out.println("Diem thi:");
+        setMark(sc.nextFloat());
+        sc.nextLine();
+        System.out.println("Email:");
         setEmail(sc.nextLine());
     }
 
-    public void Print(){
-        super.inTT();
-        System.out.println("Mã SV: " + getMaSV());
-        System.out.println("Điểm thi: " + getDiemThi());
-        System.out.println("Email: " + getEmail());
+    public void showInfo(){
+        super.showInfo();
+        System.out.println("Ma SV: "+getMaSv());
+        System.out.println("Diem thi: "+getMark());
+        System.out.println("Email: "+getEmail());
     }
 
-    public boolean checkHocbong(){
-        if(getDiemThi() > 8){
-            System.out.println("Bạn quá giỏi");
-            return true;
-        } System.out.println("Bạn quá ngu");
-        return false;
+    public boolean ktHocBong(){
+        return getMark()>8;
     }
 }
