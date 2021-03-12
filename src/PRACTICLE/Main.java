@@ -18,11 +18,9 @@ public class Main {
         ho.addHotel("Vins Hotel","Hà Nội","Gino Hướng");
         for (Hotel x:
                 ho.HotelList) {
-            System.out.println(ho.Name + ho.Location + ho.ownerName);
+            System.out.println("Tên khách sạn: "+x.Name +", "+"Địa chỉ: "+ x.Location +", "+"Chủ sở hữu: "+ x.ownerName);
         }
 
         ho.checkHotel(ho.Name);
-        System.out.println("Nhập tên khách sạn: ");
-        System.out.println("Tên khách sạn: " + ho.getName() +"-" + "Địa chỉ: " + ho.getLocation() + "-" + "Chủ sở hữu: " + ho.getOwnerName());
     }
 }
